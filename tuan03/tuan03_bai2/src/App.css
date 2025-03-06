@@ -1,0 +1,141 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input::placeholder {
+  text-align: right;
+}
+/* Căn chỉnh form nhập liệu */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+/* Nhãn cho input
+label {
+  font-weight: normal;
+  margin-bottom: 5px;
+  text-align: left;
+} */
+/* Ô nhập liệu */
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+/* Khi nhập vào ô input sẽ đổi màu border */
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Nút bấm */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+/* Hiệu ứng hover cho nút */
+button:hover {
+  background-color: #0056b3;
+}
+/* Bảng hiển thị kết quả */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+/* Tiêu đề bảng */
+thead {
+  background-color: #007bff;
+  color: white;
+}
+/* Ô trong bảng */
+td, th {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+/* Màu nền xen kẽ cho hàng */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+/* Hiệu ứng khi hover vào hàng */
+tbody tr:hover {
+  background-color: #e9ecef;
+}
+/* Placeholder trong input căn phải */
+input::placeholder {
+  text-align: right;
+  content: "VND";
+}
+/* Container chứa toàn bộ form và kết quả */
+.container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Giới hạn độ rộng */
+  text-align: center;
+}
