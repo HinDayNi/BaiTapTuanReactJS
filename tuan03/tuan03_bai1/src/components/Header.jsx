@@ -9,7 +9,7 @@ const menuItems = ['What to cook', 'Recipes', 'Occasions', 'About Us']
 function Header(){
 
     return(
-        <div className="fixed top-0 left-0 w-full flex items-center justify-between bg-white px-10 py-4 shadow-sm z-50 ">
+        <div className="fixed top-0 left-0 w-full h-16 flex items-center justify-between bg-white px-10 py-4 shadow-sm z-50">
             <div className="flex items-center space-x-5 ">
                 <img src= {logo} className="flex space-x-10" alt = "Logo"/>
                 <div className="flex bg-gray-200 h-10 items-center px-2 py-2 rounded-full">

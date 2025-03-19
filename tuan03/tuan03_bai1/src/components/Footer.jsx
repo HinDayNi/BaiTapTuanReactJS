@@ -1,8 +1,8 @@
-import img_Chefify from '../assets/Icon Button 73.png'
+import img_Chefify from '../assets/Screenshot 2025-03-10 112430.png'
 export default function Footer(){
 
 const Recipces =['What to Cook This Week','Pasta','Dinner','Healthy','Vegetarian','Vegan','Christmas']
-const LearnMore = [,'Our cooks','See Our Features','FAQ']
+const LearnMore = ['Our cooks','See Our Features','FAQ']
 const Shop = ['Gift Subscription','Send Us Feedback']
 
     return(
@@ -18,7 +18,7 @@ const Shop = ['Gift Subscription','Send Us Feedback']
                 </div>
                 <div className="flex text-white text-left">
                     <img src={img_Chefify} alt="Chef Hat" className='w-15 h-15 p-3'/>
-                    <h2>Chefify</h2>
+                    
                     <p>2023 Chefify Company</p>
                     <p>Terms of Service Privacy Poilicy</p>
                 </div>
