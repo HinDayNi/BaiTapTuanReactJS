@@ -1,10 +1,12 @@
-function Contact(){
+
+function Contact () {
     return(
-       <div>
-         <h1>Lien he</h1>
-        <p>Da Nang</p>
-        <p>Email: nguyenhien@gmail.com</p>
-       </div>
+        <div className="text-center ">
+            <h1>Contact</h1>
+            <p>email: nghien04@gmail.com</p>
+            <p>Phone: 0702636966</p>
+            <p>Địa chỉ: Đà nẵng</p>
+        </div>
     )
 }
-export default Contact;
+export default Contact

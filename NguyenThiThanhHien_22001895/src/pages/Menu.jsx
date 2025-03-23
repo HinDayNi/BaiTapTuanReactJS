@@ -1,11 +1,15 @@
-import MenuList from "../component/MenuList";
-
-function Menu(){
+import MenuList from "../components/MenuList"
+function Menu () {
     return(
-        <div>
-            <h1>Thuc down</h1>
-            <MenuList menu={this.props.menu}/>
+        <>
+        <div className="text-center">
+            <h1 className=" text-blue-700 font-bold">THỰC ĐƠN</h1>
         </div>
+        <div>
+            <MenuList/>
+        </div>
+       
+        </>
     )
 }
-export default Menu;
+export default Menu

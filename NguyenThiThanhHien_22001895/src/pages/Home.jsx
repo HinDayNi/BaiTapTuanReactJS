@@ -1,10 +1,9 @@
 
-function Home(){
+function Home () {
     return(
         <div>
-            <h1>Chao mung den voi quan an</h1>
-            <p>Trai nghiem am thuc tuyet voi tai day</p>
+            <h2 className="font-bold text-4xl justify-center">Welcome to Restaurants</h2>
         </div>
     )
 }
-export default Home;
+export default Home

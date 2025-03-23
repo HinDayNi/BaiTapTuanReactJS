@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "temMon": "Bún bò Huế",
+      "gia": 50000,
+      "hinhAnh": "/src/assets/bunbo.jpg",
+      "moTa": "Món ăn đặc trưng của miền Trung với nước lèo đậm đà."
+    },
+    {
+      "id": 2,
+      "temMon": "Phở bò",
+      "gia": 50000,
+      "hinhAnh": "/src/assets/bunbo.jpg",
+      "moTa": "Món ăn đặc trưng của miền Trung với nước lèo đậm đà."
+    },
+    {
+      "id": 3,
+      "temMon": "Bún bò Huế",
+      "gia": 50000,
+      "hinhAnh": "/src/assets/bunbo.jpg",
+      "moTa": "Món ăn đặc trưng của miền Trung với nước lèo đậm đà."
+    },
+    {
+      "id": 4,
+      "temMon": "Phở bò",
+      "gia": 50000,
+      "hinhAnh": "/src/assets/bunbo.jpg",
+      "moTa": "Món ăn đặc trưng của miền Trung với nước lèo đậm đà."
+    },
+    {
+      "id": 5,
+      "temMon": "Bún bò Huế",
+      "gia": 50000,
+      "hinhAnh": "/src/assets/bunbo.jpg",
+      "moTa": "Món ăn đặc trưng của miền Trung với nước lèo đậm đà."
+    },
+    {
+      "id": 6,
+      "temMon": "Phở bò",
+      "gia": 50000,
+      "hinhAnh": "/src/assets/bunbo.jpg",
+      "moTa": "Món ăn đặc trưng của miền Trung với nước lèo đậm đà."
+    }
+  ]
+  

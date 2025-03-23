@@ -1,34 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react'
 import './App.css'
-import Header from './component/Heder'
-import MenuList from './component/MenuList'
-import Footer from './component/Footer'
-import Menu from './pages/Menu'
+import Header, {menuList} from './components/Header'
+import MenuList from './components/MenuList'
+import BookTable from './components/BookTable'
+import Footer from './components/Footer'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import Contact from './component/BookTable'
+import Menu from './pages/Menu'
+import Contact from './pages/Contact'
+import Provider from './stores/MenuContext'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-       <div className="flex justify-between p-5">
-            <Header/>
-                <main className="flex-grow">
-                    <Routers>
-                        <Route path="/" element={<Home/>}  />
-                        <Route path="/memu" element={<Menu menu={menu}/>}  />
-                        <Route path="/contact" element={<Contact/>}  />
-                    </Routers>
-                    <Contact/>
-                    <Home/>
-                    <Menu/>
-                    <MenuList/>
-                </main>
-            <Footer/>
-        </div>
+      <Provider>
+        <Header/>
+        <Routes>
+             {menuList.map((menu, index) => (
+              <Route key={index} path={menu.to} element={React.createElement(menu.tagName)}></Route>
+             ))}
+              <Route path="/book" element={<BookTable/>}></Route>
+          </Routes>
+        <Footer/>
+      </Provider>
     </>
   )
 }
