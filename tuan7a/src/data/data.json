@@ -1,0 +1,33 @@
+{
+    "customers": [
+      { "name": "Elizabeth Lee", "company": "AvatarSystems", "order_value": 359, "order_date": "10/07/2023", "status": "New" },
+      { "name": "Carlos Garcia", "company": "SmoozeShift", "order_value": 747, "order_date": "24/07/2023", "status": "New" },
+      { "name": "Elizabeth Bailey", "company": "Prime Time Telecom", "order_value": 564, "order_date": "08/08/2023", "status": "In-progress" },
+      { "name": "Ryan Brown", "company": "OmniTech Corporation", "order_value": 541, "order_date": "31/08/2023", "status": "In-progress" },
+      { "name": "Ryan Young", "company": "DataStream Inc.", "order_value": 769, "order_date": "01/05/2023", "status": "Completed" },
+      { "name": "Hailey Adams", "company": "FlowRush", "order_value": 922, "order_date": "10/06/2023", "status": "Completed" },
+      { "name": "James Smith", "company": "AlphaTech", "order_value": 625, "order_date": "15/07/2023", "status": "New" },
+      { "name": "Sophia Johnson", "company": "NextGen Corp", "order_value": 815, "order_date": "21/06/2023", "status": "Completed" },
+      { "name": "Michael Williams", "company": "Innovate Ltd", "order_value": 432, "order_date": "30/08/2023", "status": "In-progress" },
+      { "name": "Emily Brown", "company": "FutureNet", "order_value": 987, "order_date": "12/09/2023", "status": "New" },
+      { "name": "Matthew Davis", "company": "Smart Solutions", "order_value": 543, "order_date": "05/07/2023", "status": "Completed" },
+      { "name": "Olivia Wilson", "company": "CloudSync", "order_value": 789, "order_date": "25/06/2023", "status": "New" },
+      { "name": "Daniel Martinez", "company": "SoftWorks", "order_value": 678, "order_date": "02/08/2023", "status": "In-progress" },
+      { "name": "Emma Anderson", "company": "TechNova", "order_value": 456, "order_date": "18/07/2023", "status": "New" },
+      { "name": "Joshua Thomas", "company": "ByteWave", "order_value": 654, "order_date": "10/09/2023", "status": "Completed" },
+      { "name": "Mia Hernandez", "company": "DataSphere", "order_value": 874, "order_date": "01/06/2023", "status": "Completed" },
+      { "name": "Benjamin White", "company": "CodeHive", "order_value": 432, "order_date": "19/07/2023", "status": "New" },
+      { "name": "Charlotte Moore", "company": "CyberTech", "order_value": 754, "order_date": "29/08/2023", "status": "In-progress" },
+      { "name": "William Taylor", "company": "SkyNet", "order_value": 349, "order_date": "15/09/2023", "status": "New" },
+      { "name": "Samantha King", "company": "NeuralNet", "order_value": 582, "order_date": "05/06/2023", "status": "Completed" },
+      { "name": "Alexander Scott", "company": "AI Systems", "order_value": 968, "order_date": "20/07/2023", "status": "New" },
+      { "name": "Isabella Lewis", "company": "CloudCom", "order_value": 759, "order_date": "10/08/2023", "status": "In-progress" },
+      { "name": "Ethan Hall", "company": "DigitalCore", "order_value": 888, "order_date": "05/07/2023", "status": "Completed" },
+      { "name": "Ava Allen", "company": "TechFlow", "order_value": 659, "order_date": "11/09/2023", "status": "New" },
+      { "name": "Mason Young", "company": "DataBridge", "order_value": 473, "order_date": "17/08/2023", "status": "In-progress" },
+      { "name": "Sophia Carter", "company": "WebInnovate", "order_value": 799, "order_date": "22/06/2023", "status": "Completed" },
+      { "name": "Logan Rivera", "company": "AutoNet", "order_value": 412, "order_date": "15/07/2023", "status": "New" },
+      { "name": "Harper Nelson", "company": "CloudAI", "order_value": 900, "order_date": "18/09/2023", "status": "Completed" }
+    ]
+  }
+  
