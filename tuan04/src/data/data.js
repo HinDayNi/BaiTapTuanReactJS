@@ -1,0 +1,22 @@
+export const items = [
+    { id: 1, type: "Điện thoại", description: "iPhone 15 Pro Max 256GB", image: "", note: "Hàng chính hãng VN/A" },
+    { id: 2, type: "Điện thoại", description: "Samsung Galaxy S24 Ultra", image: "", note: "Màn hình 6.8 inch, S-Pen" },
+    { id: 3, type: "Laptop", description: "MacBook Air M2 2023", image: "", note: "Chip Apple M2, 16GB RAM" },
+    { id: 4, type: "Laptop", description: "Dell XPS 13 Plus", image: "", note: "Màn OLED 3.5K, Intel Core i7" },
+    { id: 5, type: "Máy ảnh", description: "Canon EOS R6 Mark II", image: "", note: "Cảm biến Full Frame 24MP" },
+    { id: 6, type: "Máy ảnh", description: "Sony A7 IV", image: "", note: "Quay 4K 60fps, chụp 33MP" },
+    { id: 7, type: "Đồng hồ", description: "Apple Watch Ultra 2", image: "", note: "GPS + Cellular, 49mm" },
+    { id: 8, type: "Đồng hồ", description: "Samsung Galaxy Watch 6 Classic", image: "", note: "Màn Super AMOLED, 46mm" },
+    { id: 9, type: "Tai nghe", description: "Sony WH-1000XM5", image: "", note: "Chống ồn chủ động, LDAC" },
+    { id: 10, type: "Tai nghe", description: "AirPods Pro 2", image: "", note: "Chống ồn, Spatial Audio" },
+    { id: 11, type: "Bàn phím", description: "Keychron K8", image: "", note: "Cơ học, Bluetooth, Gateron" },
+    { id: 12, type: "Bàn phím", description: "Logitech MX Keys", image: "", note: "Không dây, hỗ trợ macOS" },
+    { id: 13, type: "Chuột", description: "Logitech MX Master 3S", image: "", note: "Cảm biến 8000 DPI" },
+    { id: 14, type: "Chuột", description: "Razer DeathAdder V3 Pro", image: "", note: "Siêu nhẹ, dùng cho gaming" },
+    { id: 15, type: "Màn hình", description: "LG UltraFine 5K", image: "", note: "Độ phân giải 5120x2880" },
+    { id: 16, type: "Màn hình", description: "Dell U2723QE", image: "", note: "4K IPS, hỗ trợ USB-C" },
+    { id: 17, type: "Ổ cứng", description: "Samsung T7 Shield 2TB", image: "", note: "SSD di động, chống sốc" },
+    { id: 18, type: "Ổ cứng", description: "WD Black SN850X 1TB", image: "", note: "PCIe Gen 4, tốc độ cao" },
+    { id: 19, type: "Loa", description: "JBL Charge 5", image: "", note: "Loa Bluetooth, chống nước IP67" },
+    { id: 20, type: "Loa", description: "Bose SoundLink Revolve+", image: "", note: "Âm thanh 360 độ, pin 17h" }
+];
