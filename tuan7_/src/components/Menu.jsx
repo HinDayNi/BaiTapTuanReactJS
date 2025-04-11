@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
 function Menu() {
     return (
         <>
@@ -38,5 +37,4 @@ function Menu() {
         </>
     );
 }
-
 export default Menu;
