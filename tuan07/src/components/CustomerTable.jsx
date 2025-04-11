@@ -57,16 +57,15 @@ function CustomerTable({ customers, selectedRows, setSelectedRows, setCustomers 
 
     const handleSave = async () => {
         try {
-            // Kiểm tra dữ liệu trước khi gửi
             if (!formData.id || !formData.name || !formData.company || !formData.order_value || !formData.order_date || !formData.status) {
                 throw new Error("All fields are required.");
             }
 
             const updatedData = {
-                id: parseInt(formData.id), // Đảm bảo id là số
+                id: parseInt(formData.id),
                 name: formData.name,
                 company: formData.company,
-                order_value: parseFloat(formData.order_value), // Đảm bảo order_value là số
+                order_value: parseFloat(formData.order_value),
                 order_date: formData.order_date,
                 status: formData.status,
             };
@@ -88,7 +87,6 @@ function CustomerTable({ customers, selectedRows, setSelectedRows, setCustomers 
 
             const updatedCustomer = await response.json();
 
-            // Cập nhật danh sách khách hàng
             setCustomers(customers.map(customer =>
                 customer.id === updatedCustomer.id ? updatedCustomer : customer
             ));
@@ -212,4 +210,4 @@ function CustomerTable({ customers, selectedRows, setSelectedRows, setCustomers 
     );
 }
 
-export default CustomerTable;
+export default CustomerTable
