@@ -44,6 +44,7 @@ function CustomerTable({ customers, selectedRows, setSelectedRows, setCustomers 
 
     const editProduct = (product) => {
         setSelectedCustomer(product);
+
         setFormData({
             id: product.id,
             nameText: product.name?.text || '',
@@ -53,6 +54,7 @@ function CustomerTable({ customers, selectedRows, setSelectedRows, setCustomers 
             order_date: product.order_date,
             status: product.status,
         });
+
         setVisible(true);
     };
 
