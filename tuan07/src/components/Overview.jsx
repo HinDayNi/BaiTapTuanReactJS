@@ -4,8 +4,6 @@ function Overview() {
     const [turnover, setTurnover] = useState({ value: 0, periodChange: 0 });
     const [profit, setProfit] = useState({ value: 0, periodChange: 0 });
     const [newCustomers, setNewCustomers] = useState({ value: 0, periodChange: 0 });
-    const [selectedRows, setSelectedRows] = useState([]);
-    const [customers, setCustomers] = useState([]);
 
     // Gọi API cho Turnover
     useEffect(() => {
