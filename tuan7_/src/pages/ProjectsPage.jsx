@@ -2,7 +2,7 @@
 function ProjectsPage() {
     return (
         <div>
-            <h1 className="mt-5 text-pink-600">ProjectPage</h1>
+            <h1 className="mt-5 text-pink-600">Project</h1>
         </div>
     )
 }
