@@ -1,4 +1,4 @@
-
+import CustomerTable from './CustomerTable';
 import Overview from './Overview';
 import { Routes, Route } from 'react-router-dom'
 import ProjectsPage from '../pages/ProjectsPage';
@@ -15,7 +15,9 @@ function Content() {
                 <Overview />
             </div>
             <Routes>
-                {/* <Route path='/' element={<Content />} /> */}
+                <Route path='/' element={
+                    <CustomerTable />}
+                />
                 <Route path='/projects' element={<ProjectsPage />} />
                 <Route path='/teams' element={<TeamsPage />} />
                 <Route path='/analytics' element={<AnalyticsPage />} />

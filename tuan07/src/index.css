@@ -146,6 +146,14 @@ button:focus-visible {
   width: 70;
 }
 
+.p-datatable {
+  width: 100%;
+}
+
+.p-datatable-wrapper {
+  overflow-x: auto;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
