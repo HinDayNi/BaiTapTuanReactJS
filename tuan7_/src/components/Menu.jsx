@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Menu() {
     return (
@@ -7,30 +8,30 @@ function Menu() {
                 <img src="src/assets/Image 1858.png" className="p-2" alt="" />
 
                 <div className="flex flex-col gap-3">
-                    <button>
+                    <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')} end>
                         <img src="src/assets/Pie chart.png" className="" alt="" />
                         <p>Dashboard</p>
-                    </button>
-                    <button>
+                    </NavLink>
+                    <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : '')}>
                         <img src="src/assets/Folder.png" className="" alt="" />
                         <p>Project</p>
-                    </button>
-                    <button>
+                    </NavLink>
+                    <NavLink to="/teams" className={({ isActive }) => (isActive ? 'active' : '')}>
                         <img src="src/assets/Groups.png" className="" alt="" />
                         <p>Teams</p>
-                    </button>
-                    <button>
+                    </NavLink>
+                    <NavLink to="/analytics" className={({ isActive }) => (isActive ? 'active' : '')}>
                         <img src="src/assets/Pie chart.png" className="" alt="" />
                         <p>Analytics</p>
-                    </button>
-                    <button>
+                    </NavLink>
+                    <NavLink to="/messages" className={({ isActive }) => (isActive ? 'active' : '')}>
                         <img src="src/assets/Chat.png" className="" alt="" />
                         <p>Messages</p>
-                    </button>
-                    <button>
+                    </NavLink>
+                    <NavLink to="/integrations" className={({ isActive }) => (isActive ? 'active' : '')}>
                         <img src="src/assets/Code.png" className="" alt="" />
                         <p>Intergrations</p>
-                    </button>
+                    </NavLink>
                 </div>
                 <img src="src/assets/Group.png" className="" alt="" />
             </div>

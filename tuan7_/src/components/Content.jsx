@@ -1,5 +1,11 @@
 import CustomerTable from './CustomerTable';
 import Overview from './Overview';
+import { Routes, Route } from 'react-router-dom'
+import ProjectsPage from '../pages/ProjectsPage';
+import AnalyticsPage from '../pages/AnalyticsPage';
+import TeamsPage from '../pages/TeamsPage';
+import MessagesPage from '../pages/MessagesPage';
+import IntegrationsPage from '../pages/IntegrationsPage';
 import { useState, useEffect } from 'react';
 
 function Content() {
@@ -19,12 +25,21 @@ function Content() {
             <div className="h-40">
                 <Overview />
             </div>
-            <CustomerTable
-                customers={customers}
-                setCustomers={setCustomers}
-                selectedRows={selectedRows}
-                setSelectedRows={setSelectedRows}
-            />
+            <Routes>
+                <Route path='/' element={
+                    <CustomerTable
+                        customers={customers}
+                        setCustomers={setCustomers}
+                        selectedRows={selectedRows}
+                        setSelectedRows={setSelectedRows}
+                    />}
+                />
+                <Route path='/projects' element={<ProjectsPage />} />
+                <Route path='/teams' element={<TeamsPage />} />
+                <Route path='/analytics' element={<AnalyticsPage />} />
+                <Route path='/messages' element={<MessagesPage />} />
+                <Route path='/integrations' element={<IntegrationsPage />} />
+            </Routes>
         </div>
     );
 }
