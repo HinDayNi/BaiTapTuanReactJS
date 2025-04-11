@@ -1,0 +1,82 @@
+{
+  "turnover": {
+    "value": 92405,
+    "periodChange": 5.39
+  },
+  "profit": {
+    "value": 32218,
+    "periodChange": 5.39
+  },
+  "new-customers": {
+    "value": 298,
+    "periodChange": -6.84
+  },
+  "customers": [
+    {
+      "id": "1",
+      "name": {
+        "text": "Elizabeth Lee",
+        "avatar": "src/assets/Avatar (1).png"
+      },
+      "company": "AvatarSystems",
+      "order_value": 559,
+      "order_date": "10/07/2023",
+      "status": "Completed"
+    },
+    {
+      "id": "2",
+      "name": {
+        "text": "Carlos Garcia",
+        "avatar": "src/assets/Avatar (2).png"
+      },
+      "company": "SnoozeShift",
+      "order_value": 747,
+      "order_date": "24/07/2023",
+      "status": "Completed"
+    },
+    {
+      "id": "3",
+      "name": {
+        "text": "Elizabeth Bailey",
+        "avatar": "src/assets/Avatar (3).png"
+      },
+      "company": "Prime Time Telecom",
+      "order_value": 564,
+      "order_date": "08/08/2024",
+      "status": "In-progress"
+    },
+    {
+      "id": "4",
+      "name": {
+        "text": "Ryan Brown",
+        "avatar": "src/assets/Avatar (4).png"
+      },
+      "company": "OmniTech Corporation",
+      "order_value": 541,
+      "order_date": "31/08/2023",
+      "status": "Completed"
+    },
+    {
+      "id": "5",
+      "name": {
+        "text": "Ryan Young",
+        "avatar": "src/assets/Avatar (5).png"
+      },
+      "company": "DataStream Inc",
+      "order_value": 769,
+      "order_date": "01/09/2023",
+      "status": "Completed"
+    },
+    {
+      "id": "6",
+      "name": {
+        "text": "Hailey Adams",
+        "avatar": "src/assets/Avatar 313.png"
+      },
+      "company": "FlowRush",
+      "order_value": 922,
+      "order_date": "10/06/2023",
+      "status": "Completed"
+    }
+  ]
+}
