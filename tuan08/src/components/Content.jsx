@@ -9,6 +9,7 @@ function Content() {
         title: "Salad Caprese",
         description: "Classic Italian Salad Caprese: ripe tomatoes, fresh mozzarella, herbs, olive oil, and balsamic vinegar create a refreshing dish for lunch or appetizer.",
         author: "Salad Caprese",
+        authorImage: "/src/assets/avatar.png",
         tag: "Recipe of the day",
         cookTime: "20 min",
         servings: 4,
@@ -16,10 +17,10 @@ function Content() {
     };
 
     const categories = [
-        { title: 'Breakfast', count: 12, image: 'src/assets/breakfast.jpg' },
-        { title: 'Lunch', count: 15, image: 'src/assets/lunch.jpg' },
-        { title: 'Dinner', count: 20, image: 'src/assets/dinner.jpg' },
-        { title: 'Desserts', count: 8, image: 'src/assets/desserts.jpg' }
+        { title: 'Breakfast', count: 12, image: 'src/assets/Italian-style tomato.png' },
+        { title: 'Lunch', count: 15, image: 'src/assets/Lotus delight salad_01.png' },
+        { title: 'Dinner', count: 20, image: 'src/assets/Lotus delight salad.png' },
+        { title: 'Desserts', count: 8, image: 'src/assets/Salad with cabbage.png' }
     ];
 
     const summerRecipes = [
@@ -27,7 +28,7 @@ function Content() {
             title: "Fresh Summer Pasta",
             description: "Light and refreshing pasta with cherry tomatoes, basil, and olive oil.",
             author: "Chef Maria",
-            image: "src/assets/summer-pasta.jpg",
+            image: "src/assets/Italian-style tomato.png",
             cookTime: "25 min",
             servings: 4,
             difficulty: "Medium"
@@ -36,7 +37,7 @@ function Content() {
             title: "Grilled Peach Salad",
             description: "Sweet grilled peaches with arugula and goat cheese.",
             author: "Chef John",
-            image: "src/assets/peach-salad.jpg",
+            image: "src/assets/Italian-style tomato.png",
             cookTime: "15 min",
             servings: 2,
             difficulty: "Easy"
@@ -45,7 +46,7 @@ function Content() {
             title: "Lemon Sorbet",
             description: "Refreshing homemade lemon sorbet perfect for hot days.",
             author: "Chef Anna",
-            image: "src/assets/lemon-sorbet.jpg",
+            image: "src/assets/Bean, shrimp, and potato salad.jpg",
             cookTime: "30 min",
             servings: 6,
             difficulty: "Easy"
@@ -53,49 +54,256 @@ function Content() {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-50">
-            {/* Hero Section */}
-            <div className="relative h-[600px] mb-16">
-                <img 
+        <div className="!bg-gray-50 w-full">
+            <div className="relative w-full">
+                <img
                     src={woman}
-                    alt="Kitchen scene"
+                    alt="Hero"
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent">
-                    <div className="max-w-7xl mx-auto h-full px-6 md:px-10">
+                <div className="absolute inset-0 !bg-gradient-to-r from-black/60 via-black/40 to-transparent">
+                    <div className="max-w-[1440px] mx-auto h-full px-20">
                         <div className="h-full flex items-center">
-                            <RecipeCard {...featuredRecipe} isLarge={true} />
+                            <RecipeCard {...featuredRecipe} />
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Main Content */}
-            <div className="max-w-7xl mx-auto px-6 md:px-10">
-                {/* Categories Section */}
-                <div className="mb-16">
-                    <SectionTitle 
-                        title="Popular Categories" 
-                        viewAllText="View all categories"
-                        onViewAll={() => console.log('View all categories')}
-                    />
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                        {categories.map((category, index) => (
-                            <CategoryCard key={index} {...category} />
-                        ))}
+            <div className="!w-full !bg-white">
+                <div className="px-20 py-20">
+                    <div className="text-center mb-16">
+                        <h2 className="text-[44px] font-bold !text-pink-500 mb-3">This Summer Recipes</h2>
+                        <p className="!text-gray-600 text-[20px]">We have all your Independence Day sweets covered.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                            <div className="relative aspect-square">
+                                <img src="src/assets/Italian-style tomato.png" alt="Italian-style tomato" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="p-6">
+                                <div className="flex items-center justify-between">
+                                    <h3 className="!text-gray-800 font-medium text-base">Italian-style tomato salad</h3>
+                                    <button className="!text-pink-500">
+                                        <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-6 h-6" />
+                                    </button>
+                                </div>
+                                <p className="!text-pink-500 text-sm mt-2">15 minutes</p>
+                            </div>
+                        </div>
+
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                            <div className="relative aspect-square">
+                                <img src="src/assets/Vegetable and shrimp spaghetti.png" alt="Spaghetti with vegetables" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="p-4">
+                                <div className="flex items-center justify-between">
+                                    <h3 className="!text-gray-800 font-medium text-sm">Spaghetti with vegetables and shrimp</h3>
+                                    <button className="!text-pink-500">
+                                        <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-5 h-5" />
+                                    </button>
+                                </div>
+                                <p className="!text-pink-500 text-xs mt-1 flex items-start">25 minutes</p>
+                            </div>
+                        </div>
+
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                            <div className="relative aspect-square">
+                                <img src="src/assets/Lotus delight salad.png" alt="Lotus delight salad" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="p-4">
+                                <div className="flex items-center justify-between">
+                                    <h3 className="!text-gray-800 font-medium text-sm">Lotus delight salad</h3>
+                                    <button className="!text-pink-500">
+                                        <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-5 h-5" />
+                                    </button>
+                                </div>
+                                <p className="!text-pink-500 text-xs mt-1 flex items-start">20 minutes</p>
+                            </div>
+                        </div>
+
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                            <div className="relative aspect-square">
+                                <img src="src/assets/Snack cakes.png" alt="Snack cakes" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="p-4">
+                                <div className="flex items-center justify-between">
+                                    <h3 className="!text-gray-800 font-medium text-sm">Snack cakes</h3>
+                                    <button className="!text-pink-500">
+                                        <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-5 h-5" />
+                                    </button>
+                                </div>
+                                <p className="!text-pink-500 text-xs mt-1 flex items-start">21 minutes</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                {/* Summer Recipes Section */}
-                <div className="mb-16">
-                    <SectionTitle 
-                        title="This Summer Recipes" 
-                        onViewAll={() => console.log('View all summer recipes')}
-                    />
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {summerRecipes.map((recipe, index) => (
-                            <RecipeCard key={index} {...recipe} />
-                        ))}
+            <div className="!w-full !bg-gray-50">
+                <div className="px-20 py-20">
+                    <div className="text-center mb-16">
+                        <h2 className="text-[2.75rem] font-bold !text-pink-500 mb-3">Recipes With Videos</h2>
+                        <p className="!text-gray-600 text-lg">Cooking Up Culinary Creations with Step-by-Step Videos</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                            <div className="relative aspect-square">
+                                <img src="src/assets/Salad with cabbage.png" alt="Salad with cabbage" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="p-4">
+                                <div className="flex items-center justify-between">
+                                    <h3 className="!text-gray-800 font-medium text-sm">Salad with cabbage and shrimp</h3>
+                                    <button className="!text-pink-500">
+                                        <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-5 h-5" />
+                                    </button>
+                                </div>
+                                <p className="!text-pink-500 text-xs mt-1 flex items-start">32 minutes</p>
+                            </div>
+                        </div>
+
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                            <div className="relative aspect-square">
+                                <img src="src/assets/Bean, shrimp, and potato salad.png" alt="Salad of cove beans" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="p-4">
+                                <div className="flex items-center justify-between">
+                                    <h3 className="!text-gray-800 font-medium text-sm">Salad of cove beans, shrimp and potatoes</h3>
+                                    <button className="!text-pink-500">
+                                        <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-5 h-5" />
+                                    </button>
+                                </div>
+                                <p className="!text-pink-500 text-xs mt-1 flex items-start">20 minutes</p>
+                            </div>
+                        </div>
+
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                            <div className="relative aspect-square">
+                                <img src="src/assets/Sunny-side up fried eggs.png" alt="Sunny-side up fried eggs" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="p-4">
+                                <div className="flex items-center justify-between">
+                                    <h3 className="!text-gray-800 font-medium text-sm">Sunny-side up fried eggs</h3>
+                                    <button className="!text-pink-500">
+                                        <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-5 h-5" />
+                                    </button>
+                                </div>
+                                <p className="!text-pink-500 text-xs mt-1 flex items-start">15 minutes</p>
+                            </div>
+                        </div>
+
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                            <div className="relative aspect-square">
+                                <img src="src/assets/Lotus delight salad_01.png" alt="Lotus delight salad" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="p-4">
+                                <div className="flex items-center justify-between">
+                                    <h3 className="!text-gray-800 font-medium text-sm">Lotus delight salad</h3>
+                                    <button className="!text-pink-500">
+                                        <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-5 h-5" />
+                                    </button>
+                                </div>
+                                <p className="!text-pink-500 text-xs mt-1 flex items-start">20 minutes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="w-full !bg-white">
+                <div className="px-20 py-20">
+                    <div className="text-center mb-16">
+                        <h2 className="text-[44px] font-bold !text-pink-500 mb-3">Editor's pick</h2>
+                        <p className="!text-gray-600 text-[20px]">Curated Culinary Delights: Handpicked Favorites by Our Expert Editors!</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm p-6">
+                            <div className="flex gap-6">
+                                <div className="w-48 h-48">
+                                    <img src="src/assets/Stuffed sticky rice ball.png" alt="Stuffed sticky rice ball" className="w-full h-full object-cover rounded-xl" />
+                                </div>
+                                <div className="flex-1">
+                                    <div className="flex items-center justify-between mb-3">
+                                        <h3 className="!text-gray-800 text-xl font-medium">Stuffed sticky rice ball</h3>
+                                        <button className="!text-pink-500">
+                                            <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-6 h-6" />
+                                        </button>
+                                    </div>
+                                    <p className="!text-pink-500 text-sm mb-4">34 minutes</p>
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <img src="src/assets/avatar.png" alt="Jennifer" className="w-8 h-8 rounded-full" />
+                                        <span className="text-base text-gray-600">Jennifer King</span>
+                                    </div>
+                                    <p className="text-base text-gray-600 leading-relaxed">Stuffed sticky rice balls: A delightful Asian treat with chewy, glutinous rice and a flavorful surprise filling...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm p-6">
+                            <div className="flex gap-6">
+                                <div className="w-48 h-48">
+                                    <img src="src/assets/Strawberry smoothie.png" alt="Strawberry smoothie" className="w-full h-full object-cover rounded-xl" />
+                                </div>
+                                <div className="flex-1">
+                                    <div className="flex items-center justify-between mb-3">
+                                        <h3 className="!text-gray-800 text-xl font-medium">Strawberry smoothie</h3>
+                                        <button className="!text-pink-500">
+                                            <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-6 h-6" />
+                                        </button>
+                                    </div>
+                                    <p className="!text-pink-500 text-sm mb-4">40 minutes</p>
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <img src="src/assets/avatar.png" alt="Matthew" className="w-8 h-8 rounded-full" />
+                                        <span className="text-base text-gray-600">Matthew Martinez</span>
+                                    </div>
+                                    <p className="text-base text-gray-600 leading-relaxed">Savor the refreshing delight of a strawberry smoothie. Made with ripe strawberries, this creamy blend offers...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm p-6">
+                            <div className="flex gap-6">
+                                <div className="w-48 h-48">
+                                    <img src="src/assets/Latte Art.png" alt="Latte Art" className="w-full h-full object-cover rounded-xl" />
+                                </div>
+                                <div className="flex-1">
+                                    <div className="flex items-center justify-between mb-3">
+                                        <h3 className="!text-gray-800 text-xl font-medium">Latte Art</h3>
+                                        <button className="!text-pink-500">
+                                            <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-6 h-6" />
+                                        </button>
+                                    </div>
+                                    <p className="!text-pink-500 text-sm mb-4">18 minutes</p>
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <img src="src/assets/avatar.png" alt="Sarah" className="w-8 h-8 rounded-full" />
+                                        <span className="text-base text-gray-600">Sarah Hill</span>
+                                    </div>
+                                    <p className="text-base text-gray-600 leading-relaxed">Latte art is the skillful craft of creating captivating designs on the surface of a latte...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm p-6">
+                            <div className="flex gap-6">
+                                <div className="w-48 h-48">
+                                    <img src="src/assets/Butter fried noodles.png" alt="Butter fried noodles" className="w-full h-full object-cover rounded-xl" />
+                                </div>
+                                <div className="flex-1">
+                                    <div className="flex items-center justify-between mb-3">
+                                        <h3 className="!text-gray-800 text-xl font-medium">Butter fried noodles</h3>
+                                        <button className="!text-pink-500">
+                                            <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-6 h-6" />
+                                        </button>
+                                    </div>
+                                    <p className="!text-pink-500 text-sm mb-4">16 minutes</p>
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <img src="src/assets/avatar.png" alt="Julia" className="w-8 h-8 rounded-full" />
+                                        <span className="text-base text-gray-600">Julia Lopez</span>
+                                    </div>
+                                    <p className="text-base text-gray-600 leading-relaxed">Butter fried noodles: Savory noodles cooked in butter for a delicious and satisfying meal...</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

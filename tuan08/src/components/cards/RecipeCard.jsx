@@ -1,68 +1,40 @@
 import React from 'react';
-import { ArrowRightIcon, ClockIcon, UserIcon, FireIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-const RecipeCard = ({ title, description, author, tag, image, cookTime, servings, difficulty, isLarge = false }) => {
+const RecipeCard = ({ title, description, author, tag, authorImage }) => {
     return (
-        <div className={`bg-white rounded-3xl ${isLarge ? 'p-8' : 'p-6'} shadow-sm ${isLarge ? 'w-full max-w-xl' : 'w-full'}`}>
-            {/* Image */}
-            {image && (
-                <div className="relative h-48 mb-6 rounded-2xl overflow-hidden">
-                    <img src={image} alt={title} className="w-full h-full object-cover" />
-                </div>
-            )}
-
-            {/* Tag */}
-            {tag && (
-                <div className="mb-6">
-                    <span className="bg-amber-400 text-sm font-medium px-4 py-1 rounded-full">
-                        {tag}
-                    </span>
-                </div>
-            )}
-
-            {/* Title and Description */}
-            <div className="mb-6">
-                <h2 className={`${isLarge ? 'text-3xl' : 'text-xl'} font-bold mb-3 text-gray-800`}>{title}</h2>
-                <p className="text-gray-600 leading-relaxed text-sm">
-                    {description}
-                </p>
+        <div className="!bg-white rounded-3xl p-6 shadow-lg max-w-sm relative">
+            <div className="absolute top-0 left-0 right-0 flex justify-center -translate-y-1/2">
+                <span className="!bg-yellow-400 text-sm font-medium px-4 py-1 rounded-full">
+                    {tag}
+                </span>
             </div>
 
-            {/* Recipe Info */}
-            {(cookTime || servings || difficulty) && (
-                <div className="flex items-center space-x-4 mb-6 text-sm text-gray-500">
-                    {cookTime && (
-                        <div className="flex items-center">
-                            <ClockIcon className="w-4 h-4 mr-1" />
-                            <span>{cookTime}</span>
-                        </div>
-                    )}
-                    {servings && (
-                        <div className="flex items-center">
-                            <UserIcon className="w-4 h-4 mr-1" />
-                            <span>{servings} servings</span>
-                        </div>
-                    )}
-                    {difficulty && (
-                        <div className="flex items-center">
-                            <FireIcon className="w-4 h-4 mr-1" />
-                            <span>{difficulty}</span>
-                        </div>
-                    )}
-                </div>
-            )}
+            <h2 className="text-2xl font-bold mb-3 !text-pink-500 mt-4">
+                {title}
+            </h2>
 
-            {/* Author and Action */}
-            <div className="flex items-center justify-between">
+            <p className="!text-gray-600 text-sm leading-relaxed mb-8">
+                {description}
+            </p>
+
+            <div className="flex items-center justify-center mb-5">
                 <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center">
-                        <span className="text-pink-500 font-medium">
-                            {author.charAt(0)}
-                        </span>
-                    </div>
-                    <span className="text-gray-600 font-medium">{author}</span>
+                    {authorImage ? (
+                        <img src={authorImage} alt={author} className="w-8 h-8 rounded-full object-cover" />
+                    ) : (
+                        <div className="w-8 h-8 rounded-full !bg-pink-100 flex items-center justify-center">
+                            <span className="!text-pink-500 font-medium text-sm">
+                                {author.charAt(0)}
+                            </span>
+                        </div>
+                    )}
+                    
                 </div>
-                <button className="flex items-center space-x-2 text-pink-500 font-medium hover:text-pink-600 transition-colors">
+            </div>
+            <span className="!text-gray-600 text-sm flex items-center justify-center mb-3">{author}</span>
+            <div className="flex justify-center">
+                <button className="!bg-pink-500 !text-white px-4 py-2 rounded-full text-sm hover:bg-pink-600 transition-colors flex items-center space-x-2 mb-5">
                     <span>View now</span>
                     <ArrowRightIcon className="w-4 h-4" />
                 </button>
