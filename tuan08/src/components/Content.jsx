@@ -147,63 +147,107 @@ function Content() {
                         <p className="!text-gray-600 text-lg">Cooking Up Culinary Creations with Step-by-Step Videos</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm group hover:shadow-lg transition-all duration-300">
                             <div className="relative aspect-square">
-                                <img src="src/assets/Salad with cabbage.png" alt="Salad with cabbage" className="w-full h-full object-cover" />
+                                <img src="src/assets/Salad with cabbage.png" alt="Salad with cabbage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
+                                    <button className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                             <div className="p-4">
                                 <div className="flex items-center justify-between">
-                                    <h3 className="!text-gray-800 font-medium text-sm">Salad with cabbage and shrimp</h3>
-                                    <button className="!text-pink-500">
+                                    <h3 className="!text-gray-800 font-medium text-sm group-hover:text-pink-500 transition-colors duration-300">Salad with cabbage and shrimp</h3>
+                                    <button className="!text-pink-500 hover:scale-110 transition-transform duration-300">
                                         <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-5 h-5" />
                                     </button>
                                 </div>
-                                <p className="!text-pink-500 text-xs mt-1 flex items-start">32 minutes</p>
+                                <div className="mt-2 flex items-center gap-2">
+                                    <p className="!text-pink-500 text-xs">32 minutes</p>
+                                    <span className="text-gray-400">•</span>
+                                    <p className="text-gray-600 text-xs">4 servings</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm group hover:shadow-lg transition-all duration-300">
                             <div className="relative aspect-square">
-                                <img src="src/assets/Bean, shrimp, and potato salad.png" alt="Salad of cove beans" className="w-full h-full object-cover" />
+                                <img src="src/assets/Bean, shrimp, and potato salad.png" alt="Salad of cove beans" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
+                                    <button className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                             <div className="p-4">
                                 <div className="flex items-center justify-between">
-                                    <h3 className="!text-gray-800 font-medium text-sm">Salad of cove beans, shrimp and potatoes</h3>
-                                    <button className="!text-pink-500">
+                                    <h3 className="!text-gray-800 font-medium text-sm group-hover:text-pink-500 transition-colors duration-300">Salad of cove beans, shrimp and potatoes</h3>
+                                    <button className="!text-pink-500 hover:scale-110 transition-transform duration-300">
                                         <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-5 h-5" />
                                     </button>
                                 </div>
-                                <p className="!text-pink-500 text-xs mt-1 flex items-start">20 minutes</p>
+                                <div className="mt-2 flex items-center gap-2">
+                                    <p className="!text-pink-500 text-xs">20 minutes</p>
+                                    <span className="text-gray-400">•</span>
+                                    <p className="text-gray-600 text-xs">2 servings</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm group hover:shadow-lg transition-all duration-300">
                             <div className="relative aspect-square">
-                                <img src="src/assets/Sunny-side up fried eggs.png" alt="Sunny-side up fried eggs" className="w-full h-full object-cover" />
+                                <img src="src/assets/Sunny-side up fried eggs.png" alt="Sunny-side up fried eggs" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
+                                    <button className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                             <div className="p-4">
                                 <div className="flex items-center justify-between">
-                                    <h3 className="!text-gray-800 font-medium text-sm">Sunny-side up fried eggs</h3>
-                                    <button className="!text-pink-500">
+                                    <h3 className="!text-gray-800 font-medium text-sm group-hover:text-pink-500 transition-colors duration-300">Sunny-side up fried eggs</h3>
+                                    <button className="!text-pink-500 hover:scale-110 transition-transform duration-300">
                                         <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-5 h-5" />
                                     </button>
                                 </div>
-                                <p className="!text-pink-500 text-xs mt-1 flex items-start">15 minutes</p>
+                                <div className="mt-2 flex items-center gap-2">
+                                    <p className="!text-pink-500 text-xs">15 minutes</p>
+                                    <span className="text-gray-400">•</span>
+                                    <p className="text-gray-600 text-xs">1 serving</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm">
+                        <div className="!bg-white rounded-xl overflow-hidden shadow-sm group hover:shadow-lg transition-all duration-300">
                             <div className="relative aspect-square">
-                                <img src="src/assets/Lotus delight salad_01.png" alt="Lotus delight salad" className="w-full h-full object-cover" />
+                                <img src="src/assets/Vegetable and shrimp spaghetti.png" alt="Spaghetti with vegetables" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
+                                    <button className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                             <div className="p-4">
                                 <div className="flex items-center justify-between">
-                                    <h3 className="!text-gray-800 font-medium text-sm">Lotus delight salad</h3>
-                                    <button className="!text-pink-500">
+                                    <h3 className="!text-gray-800 font-medium text-sm group-hover:text-pink-500 transition-colors duration-300">Spaghetti with vegetables and shrimp</h3>
+                                    <button className="!text-pink-500 hover:scale-110 transition-transform duration-300">
                                         <img src="src/assets/Icon Button 73.png" alt="bookmark" className="w-5 h-5" />
                                     </button>
                                 </div>
-                                <p className="!text-pink-500 text-xs mt-1 flex items-start">20 minutes</p>
+                                <div className="mt-2 flex items-center gap-2">
+                                    <p className="!text-pink-500 text-xs">25 minutes</p>
+                                    <span className="text-gray-400">•</span>
+                                    <p className="text-gray-600 text-xs">3 servings</p>
+                                </div>
                             </div>
                         </div>
                     </div>
