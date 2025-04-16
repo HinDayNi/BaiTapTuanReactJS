@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { updateInput, calculateBMI } from '../features/calculatorSlice';
+import { updateInput, calculateBMI } from '../components/features/calculatorSlice';
 
 const BMICalculator = () => {
   const { height, weight, result, bmiCategory } = useSelector((state) => state.calculator);

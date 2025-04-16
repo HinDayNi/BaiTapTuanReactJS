@@ -1,5 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+//npm install axios
+
 
 export const fetchUsers = createAsyncThunk(
   'users/fetchUsers',

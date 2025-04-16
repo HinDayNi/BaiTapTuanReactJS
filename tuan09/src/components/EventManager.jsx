@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addEvent, editEvent, deleteEvent, setCurrentEvent } from '../features/eventsSlice';
+import { addEvent, editEvent, deleteEvent, setCurrentEvent } from '../components/features/eventsSlice';
 
 const EventManager = () => {
   const { events, currentEvent } = useSelector((state) => state.events);

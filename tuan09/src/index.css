@@ -25,8 +25,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex;
+  place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -66,4 +66,39 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+/* Optional: Button styling */
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+.btn-secondary{
+    background-color: #007bff;
+    color: white;
+}
+
+body.dark .btn-primary.dark .btn-secondary.dark{
+  background-color: #444;
+  color: #eee;
+}
+body.dark span {
+  color: #ccc;
 }

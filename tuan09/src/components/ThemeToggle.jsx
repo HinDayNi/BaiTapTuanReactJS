@@ -1,13 +1,14 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleTheme } from '../features/themeSlice';
 import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleTheme } from '../components/features/themeSlice';
 
 const ThemeToggle = () => {
   const theme = useSelector((state) => state.theme.theme);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    document.body.className = theme;
+    document.body.classList.remove('light', 'dark');
+    document.body.classList.add(theme);
   }, [theme]);
 
   return (

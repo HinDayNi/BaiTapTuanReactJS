@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchUsers } from '../features/usersSlice';
+import { fetchUsers } from '../components/features/usersSlice';
 
 const UsersList = () => {
   const { users, status, error } = useSelector((state) => state.users);

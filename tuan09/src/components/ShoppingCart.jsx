@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addItem, removeItem, updateQuantity, selectCartTotal, selectCartItemCount } from '../features/cartSlice';
+import { addItem, removeItem, updateQuantity, selectCartTotal, selectCartItemCount } from '../components/features/cartSlice';
 
 const products = [
   { id: 1, name: 'Điện thoại', price: 10000000 },
