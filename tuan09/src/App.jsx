@@ -5,8 +5,13 @@ import ThemeToggle from './components/ThemeToggle';
 import ShoppingCart from './components/ShoppingCart';
 import Auth from './components/Auth';
 import UsersList from './components/UsersList';
+import AdvancedCounter from './components/AdvancedCounter';
 import BMICalculator from './components/BMICalculator';
 import EventManager from './components/EventManager';
+import LoginForm from './components/auth/LoginForm';
+import UserProfile from './components/auth/UserProfile';
+import ProductList from './components/ProductList';
+import CartComponent from './components/CartComponent';
 
 function App() {
   const theme = useSelector((state) => state.theme.theme);
@@ -15,10 +20,7 @@ function App() {
     <div className={theme}>
       <div className="container mx-auto px-4 py-8 max-w-5xl">
         <header className="mb-8 text-center">
-          <h1 className="text-3xl font-bold mb-2">Redux Toolkit - Các tính năng</h1>
-          <p className="text-gray-600 dark:text-gray-400">
-            Ứng dụng React với Redux Toolkit và Tailwind CSS
-          </p>
+          <h1 className="text-3xl font-bold mb-2">Redux Toolkit - Tuần 09</h1>
         </header>
 
         <main>
@@ -28,8 +30,13 @@ function App() {
           <ShoppingCart />
           <Auth />
           <UsersList />
+          <AdvancedCounter/>
           <BMICalculator />
           <EventManager />
+          <UserProfile/>
+          <LoginForm/>
+          <ProductList/>
+          <CartComponent/>
         </main>
 
         <footer className="mt-10 pt-6 border-t dark:border-gray-700 text-center text-gray-600 dark:text-gray-400">

@@ -43,13 +43,13 @@ const BMICalculator = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary w-full">
+        <button type="submit" className="btn btn-primary w-full !bg-blue-600">
           Tính BMI
         </button>
       </form>
       
       {result && (
-        <div className="mt-4 p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
+        <div className="mt-4 p-4 !bg-blue-100 dark:bg-blue-900 rounded-lg">
           <p className="font-bold">Chỉ số BMI: {result}</p>
           <p>Phân loại: {bmiCategory}</p>
         </div>

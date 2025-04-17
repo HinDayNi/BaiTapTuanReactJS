@@ -65,8 +65,8 @@ const EventManager = () => {
             type="text"
             name="title"
             value={formData.title}
-             onChange={handleChange}
-            className="input"
+            onChange={handleChange}
+            className="input w-full border border-gray-300 rounded-md p-2"
             required
           />
         </div>
@@ -77,7 +77,7 @@ const EventManager = () => {
             name="date"
             value={formData.date}
             onChange={handleChange}
-            className="input"
+            className="input w-full border border-gray-300 rounded-md p-2"
             required
           />
         </div>
@@ -88,7 +88,7 @@ const EventManager = () => {
             name="location"
             value={formData.location}
             onChange={handleChange}
-            className="input"
+            className="input w-full border border-gray-300 rounded-md p-2"
             required
           />
         </div>
@@ -98,19 +98,22 @@ const EventManager = () => {
             name="description"
             value={formData.description}
             onChange={handleChange}
-            className="input min-h-24"
+            className="input w-full border border-gray-300 rounded-md p-2 min-h-24"
             required
           ></textarea>
         </div>
         <div className="flex gap-2">
-          <button type="submit" className="btn btn-primary flex-1">
+          <button
+            type="submit"
+            className="flex-1 px-4 py-2 border b-blue-500 !text-white !bg-blue-600 rounded-md hover:bg-blue-50 transition-colors"
+          >
             {currentEvent ? 'Cập nhật sự kiện' : 'Thêm sự kiện'}
           </button>
           {currentEvent && (
             <button
               type="button"
               onClick={resetForm}
-              className="btn btn-secondary"
+              className="px-4 py-2 border border-gray-400 text-gray-600 rounded-md hover:bg-gray-100 transition-colors"
             >
               Hủy
             </button>
@@ -126,20 +129,20 @@ const EventManager = () => {
           {events.map((event) => (
             <div
               key={event.id}
-              className="border rounded p-3 dark:border-gray-700"
+              className="border border-gray-300 rounded p-3 dark:border-gray-700"
             >
               <div className="flex justify-between items-start mb-2">
                 <h4 className="font-bold">{event.title}</h4>
                 <div className="flex gap-2">
                   <button
                     onClick={() => handleEdit(event)}
-                    className="text-blue-500 hover:text-blue-700"
+                    className="px-2 py-1 border border-blue-500 text-blue-500 rounded-md hover:bg-blue-50 transition-colors"
                   >
                     Sửa
                   </button>
                   <button
                     onClick={() => dispatch(deleteEvent(event.id))}
-                    className="text-red-500 hover:text-red-700"
+                    className="px-2 py-1 border border-red-500 text-red-500 rounded-md hover:bg-red-50 transition-colors"
                   >
                     Xóa
                   </button>
@@ -159,4 +162,3 @@ const EventManager = () => {
 };
 
 export default EventManager;
-            

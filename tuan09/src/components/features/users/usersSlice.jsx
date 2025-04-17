@@ -1,15 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-//npm install axios
 
-
-export const fetchUsers = createAsyncThunk(
-  'users/fetchUsers',
-  async () => {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-    return response.data;
-  }
-);
+// Async thunk để gọi API
+export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
+  const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+  return response.data;
+});
 
 const usersSlice = createSlice({
   name: 'users',
@@ -34,5 +30,4 @@ const usersSlice = createSlice({
       });
   },
 });
-
 export default usersSlice.reducer;
