@@ -1,50 +1,112 @@
-import { useSelector } from 'react-redux';
-import Counter from './components/Counter';
-import TodoList from './components/TodoList';
-import ThemeToggle from './components/ThemeToggle';
-import ShoppingCart from './components/ShoppingCart';
-import Auth from './components/Auth';
-import UsersList from './components/UsersList';
-import AdvancedCounter from './components/AdvancedCounter';
-import BMICalculator from './components/BMICalculator';
-import EventManager from './components/EventManager';
-import LoginForm from './components/auth/LoginForm';
-import UserProfile from './components/auth/UserProfile';
-import ProductList from './components/ProductList';
-import CartComponent from './components/CartComponent';
+  "use client"
 
-function App() {
-  const theme = useSelector((state) => state.theme.theme);
+  import { useState } from "react"
+  import { Provider } from "react-redux"
+  import { store } from "./store"
+  import Counter from "./features/Counter"
+  import TodoList from "./features/TodoList"
+  import ThemeToggle from "./features/ThemeToggle"
+  import ShoppingCart from "./features/ShoppingCart"
+  import Auth from "./features/Auth"
+  import AsyncData from "./features/AsyncData"
+  import AdvancedCounter from "./features/AdvancedCounter"
+  import Calculator from "./features/Calculator"
+  import EventManagement from "./features/EventManagement"
+  import CombinedFeatures from "./features/CombinedFeatures"
+  import "./App.css"
 
-  return (
-    <div className={theme}>
-      <div className="container mx-auto px-4 py-8 max-w-5xl">
-        <header className="mb-8 text-center">
-          <h1 className="text-3xl font-bold mb-2">Redux Toolkit - Tuần 09</h1>
-        </header>
+  function App() {
+    const [activeFeature, setActiveFeature] = useState("counter")
+    const [theme, setTheme] = useState("light")
 
-        <main>
-          <Counter />
-          <TodoList />
-          <ThemeToggle />
-          <ShoppingCart />
-          <Auth />
-          <UsersList />
-          <AdvancedCounter/>
-          <BMICalculator />
-          <EventManager />
-          <UserProfile/>
-          <LoginForm/>
-          <ProductList/>
-          <CartComponent/>
-        </main>
+    const toggleTheme = () => {
+      setTheme(theme === "light" ? "dark" : "light")
+    }
 
-        <footer className="mt-10 pt-6 border-t dark:border-gray-700 text-center text-gray-600 dark:text-gray-400">
-          <p>© 2025 - Redux Features App</p>
-        </footer>
-      </div>
-    </div>
-  );
-}
+    const renderFeature = () => {
+      switch (activeFeature) {
+        case "counter":
+          return <Counter />
+        case "todo":
+          return <TodoList />
+        case "theme":
+          return <ThemeToggle onToggle={toggleTheme} currentTheme={theme} />
+        case "cart":
+          return <ShoppingCart />
+        case "auth":
+          return <Auth />
+        case "async":
+          return <AsyncData />
+        case "advancedCounter":
+          return <AdvancedCounter />
+        case "calculator":
+          return <Calculator />
+        case "events":
+          return <EventManagement />
+        case "combined":
+          return <CombinedFeatures />
+        default:
+          return <Counter />
+      }
+    }
 
-export default App;
+    return (
+      <Provider store={store}>
+        <div className={`app ${theme}`}>
+          <header>
+            <h1>Redux Toolkit Features</h1>
+            <button className="theme-toggle" onClick={toggleTheme}>
+              {theme === "light" ? "🌙" : "☀️"}
+            </button>
+          </header>
+
+          <div className="container">
+            <nav className="sidebar">
+              <ul>
+                <li className={activeFeature === "counter" ? "active" : ""} onClick={() => setActiveFeature("counter")}>
+                  🧩 Counter App
+                </li>
+                <li className={activeFeature === "todo" ? "active" : ""} onClick={() => setActiveFeature("todo")}>
+                  📋 To-do List
+                </li>
+                <li className={activeFeature === "theme" ? "active" : ""} onClick={() => setActiveFeature("theme")}>
+                  🔁 Toggle Theme
+                </li>
+                <li className={activeFeature === "cart" ? "active" : ""} onClick={() => setActiveFeature("cart")}>
+                  📦 Shopping Cart
+                </li>
+                <li className={activeFeature === "auth" ? "active" : ""} onClick={() => setActiveFeature("auth")}>
+                  🎯 Auth
+                </li>
+                <li className={activeFeature === "async" ? "active" : ""} onClick={() => setActiveFeature("async")}>
+                  🔄 Async Data
+                </li>
+                <li
+                  className={activeFeature === "advancedCounter" ? "active" : ""}
+                  onClick={() => setActiveFeature("advancedCounter")}
+                >
+                  🔄 Advanced Counter
+                </li>
+                <li
+                  className={activeFeature === "calculator" ? "active" : ""}
+                  onClick={() => setActiveFeature("calculator")}
+                >
+                  🧮 Calculator
+                </li>
+                <li className={activeFeature === "events" ? "active" : ""} onClick={() => setActiveFeature("events")}>
+                  📅 Event Management
+                </li>
+                <li className={activeFeature === "combined" ? "active" : ""} onClick={() => setActiveFeature("combined")}>
+                  🔐 Combined Features
+                </li>
+              </ul>
+            </nav>
+
+            <main className="content">{renderFeature()}</main>
+          </div>
+        </div>
+      </Provider>
+    )
+  }
+
+  export default App
