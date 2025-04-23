@@ -80,6 +80,7 @@ function App() {
         <h2 className="text-xl font-semibold mb-4">Thêm Sản Phẩm Mới</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
+            
             <label className="block text-sm font-medium mb-1">Tên sản phẩm</label>
             <input
               type="text"
