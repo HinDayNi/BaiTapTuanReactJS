@@ -269,6 +269,10 @@ function App() {
       stock: "",
     })
   }
+  // Thêm hàm xoá sản phẩm
+  const deleteProduct = (id) => {
+    setProducts(products.filter((product) => product.id !== id))
+  }
 
   return (
     <div className="container mx-auto p-4">
@@ -377,7 +381,11 @@ function App() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{product.stock}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                  <button className="text-red-600 hover:text-red-900 bg-red-100 px-3 py-1 rounded">
+                 {/* Kết nối nút Xoá với hàm deleteProduct */}
+                 <button
+                    onClick={() => deleteProduct(product.id)}
+                    className="text-red-600 hover:text-red-900 bg-red-100 px-3 py-1 rounded"
+                  >
                     Xoá
                   </button>
                 </td>
