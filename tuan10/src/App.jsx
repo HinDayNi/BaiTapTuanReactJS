@@ -273,6 +273,8 @@ function App() {
   const deleteProduct = (id) => {
     setProducts(products.filter((product) => product.id !== id))
   }
+  // Thêm state cho tìm kiếm
+  const [searchTerm, setSearchTerm] = useState("")
 
   return (
     <div className="container mx-auto p-4">
@@ -338,6 +340,19 @@ function App() {
         >
           Thêm Sản Phẩm
         </button>
+      </div>
+      {/* Search */}
+      <div className="bg-white text-black p-6 rounded-lg shadow-md mb-6">
+        <div>
+          <label className="block text-sm font-medium mb-1 text-black">Tìm kiếm theo tên</label>
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full p-2 border rounded"
+            placeholder="Nhập tên sản phẩm cần tìm"
+          />
+        </div>
       </div>
 
       {/* Product List */}
