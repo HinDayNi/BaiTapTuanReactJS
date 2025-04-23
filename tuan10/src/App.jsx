@@ -63,7 +63,7 @@ function App() {
 
       {/* Add Product Form */}
       <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-        <h2 className="text-blue-500 text-xl font-semibold mb-4">Thêm Sản Phẩm Mới</h2>
+        <h2 className="text-black text-xl font-semibold mb-4">Thêm Sản Phẩm Mới</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium mb-1 text-black">Tên sản phẩm</label>
